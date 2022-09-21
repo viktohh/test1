@@ -12,16 +12,17 @@ before_install:
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
 
-# Assuming the .travis.yml file is in the project directory, and there is a separate sub-directory for each service
-# Use either `docker-compose` or individual `docker build` commands
-# Build
-- docker build -t udagram-api-feed ./udagram-api-feed
-# Do similar for other three images
-# Tagging
-- docker tag udagram-api-feed viktohtimmy/udagram-api-feed:v1
-# Do similar for other three images
-# Push
-# Assuming DOCKER_PASSWORD and DOCKER_USERNAME are set in the Travis repository settings
-- echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-- docker push viktohtimmy/udagram-api-feed:v1
-# Do similar for other three images
+script:
+  - docker --version
+  - docker build -f udagram-feed-api/Dockerfile -t  viktohtimmy/udagram-feed-api:latest udagram-feed-api
+  - docker build -f udagram-user-api/Dockerfile -t  viktohtimmy/udagram-user-api:latest udagram-user-api
+  - docker build -f udagram-frontend/Dockerfile -t  viktohtimmy/udagram-frontend:latest udagram-frontend
+  - docker build -f udagram-reverse-proxy/Dockerfile -t  viktohtimmy/udagram-reverse-proxy:latest udagram-reverse-proxy
+
+
+after_success:
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - docker push viktohtimmy/udagram-feed-api:latest
+  - docker push viktohtimmy/udagram-user-api:latest
+  - docker push viktohtimmy/udagram-frontend:latest
+  - docker push viktohtimmy/udagram-reverse-proxy:latest
