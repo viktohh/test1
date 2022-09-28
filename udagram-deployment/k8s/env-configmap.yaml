@@ -9,5 +9,5 @@ data:
   POSTGRES_HOST: cdr.c053p3kh8jyt.us-east-1.rds.amazonaws.com
   URL: a6784485a13df42b5b9d290c1436a2d0-1174795685.us-west-1.elb.amazonaws.com:8100
 metadata:
-  name: timvic-devv
+  name: env-configmap
   
