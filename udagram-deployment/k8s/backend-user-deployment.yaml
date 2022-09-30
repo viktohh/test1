@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: viktohtimmy/udagram-api-user:latest
+        image: viktohtimmy/udagram-api-user:v1
         ports:
         - containerPort: 80
         imagePullPolicy: Always  

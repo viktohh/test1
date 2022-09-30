@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: viktohtimmy/udagram-reverse-proxy:latest
+        image: viktohtimmy/udagram-reverse-proxy:v1
         imagePullPolicy: Always          
         resources:
           requests:
