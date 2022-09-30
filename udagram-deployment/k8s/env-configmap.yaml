@@ -7,7 +7,7 @@ data:
   POSTGRES_PASSWORD: 1234Federal.
   POSTGRES_HOST: cdr.c053p3kh8jyt.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: arn:aws:s3:::udagram-tim-dev
+  AWS_BUCKET: task-532516667886-dev
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: testing
