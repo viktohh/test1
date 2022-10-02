@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name:  udagram-frontend
-        image: viktohtimmy/udagram-frontend:v1
+        image: viktohtimmy/udagram-frontend:latest
         imagePullPolicy: Always  
         resources:
           requests:

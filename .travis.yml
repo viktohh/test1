@@ -17,12 +17,12 @@ script:
   - docker build -f udagram-api-feed/Dockerfile -t  viktohtimmy/udagram-api-feed:latest udagram-api-feed
   - docker build -f udagram-api-user/Dockerfile -t  viktohtimmy/udagram-api-user:latest udagram-api-user
   - docker build -f udagram-frontend/Dockerfile -t  viktohtimmy/udagram-frontend:latest udagram-frontend
-  - docker build -f udagram-reverse-proxy/Dockerfile -t  viktohtimmy/udagram-reverse-proxy:latest udagram-reverse-proxy
+  - docker build -f udagram-reverseproxy/Dockerfile -t  viktohtimmy/udagram-reverseproxy:latest udagram-reverse-proxy
 
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push viktohtimmy/udagram-api-feed:v1
-  - docker push viktohtimmy/udagram-api-user:v1
-  - docker push viktohtimmy/udagram-frontend:v1
-  - docker push viktohtimmy/udagram-reverse-proxy:v1
+  - docker push viktohtimmy/udagram-api-feed:latest
+  - docker push viktohtimmy/udagram-api-user:latest
+  - docker push viktohtimmy/udagram-frontend:latest
+  - docker push viktohtimmy/udagram-reverseproxy:latest
