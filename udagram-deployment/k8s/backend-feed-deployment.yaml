@@ -15,10 +15,10 @@ spec:
         app: backend-feed
     spec:
       containers:
-      - name: udagram-api-feed
+      - name: backend-feed
         image: viktohtimmy/udagram-api-feed:latest
         ports:
-        - containerPort: 80
+        - containerPort: 8080
         imagePullPolicy: Always  
         resources:
           requests:
