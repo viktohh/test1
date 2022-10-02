@@ -17,7 +17,7 @@ script:
   - docker build -f udagram-api-feed/Dockerfile -t  viktohtimmy/udagram-api-feed:latest udagram-api-feed
   - docker build -f udagram-api-user/Dockerfile -t  viktohtimmy/udagram-api-user:latest udagram-api-user
   - docker build -f udagram-frontend/Dockerfile -t  viktohtimmy/udagram-frontend:latest udagram-frontend
-  - docker build -f udagram-reverseproxy/Dockerfile -t  viktohtimmy/udagram-reverseproxy:latest udagram-reverse-proxy
+  - docker build -f udagram-reverseproxy/Dockerfile -t  viktohtimmy/udagram-reverseproxy:latest udagram-reverseproxy
 
 
 after_success:
