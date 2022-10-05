@@ -15,14 +15,15 @@ spec:
         app: frontend
     spec:
       containers:
-      - name: frontend
+      - name: udagram-frontend
         image: viktohtimmy/udagram-frontend:latest
-        imagePullPolicy: Always  
+        ports:
+        - containerPort: 80
         resources:
           requests:
             memory: "512Mi"
-            cpu: "250m"
+            cpu: "200m"
           limits:
-            memory: "1024Mi"
-            cpu: "500m"
+            memory: "1536Mi"
+            cpu: "1000m"
       restartPolicy: Always
