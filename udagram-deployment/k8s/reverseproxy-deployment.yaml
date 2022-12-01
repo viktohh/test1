@@ -15,16 +15,15 @@ spec:
         app: reverseproxy
     spec:
       containers:
-      - name: reverseproxy
+      - name: udagram-reverseproxy
         image: viktohtimmy/udagram-reverseproxy:latest
-        imagePullPolicy: Always          
+        ports:
+        - containerPort: 8080
         resources:
           requests:
             memory: "64Mi"
-            cpu: "250m"
+            cpu: "200m"
           limits:
             memory: "1024Mi"
-            cpu: "500m"       
-        ports:
-        - containerPort: 8080
+            cpu: "1000m"
       restartPolicy: Always
