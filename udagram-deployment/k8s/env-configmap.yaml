@@ -5,9 +5,9 @@ metadata:
 data:
   POSTGRES_USERNAME: postgres
   POSTGRES_PASSWORD: 1234Federal.
-  POSTGRES_HOST: udagram-instance.cco2vhv1rytv.us-east-1.rds.amazonaws.com
+  POSTGRES_HOST: udagram-instance.cwgrvpygwb7k.us-east-1.rds.amazonaws.com
   POSTGRES_DB: postgres
-  AWS_BUCKET: uda-instagram
+  AWS_BUCKET: udagram-instagram1
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_SECRET: testing
